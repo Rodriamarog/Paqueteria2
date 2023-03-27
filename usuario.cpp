@@ -53,13 +53,16 @@ int Usuario::getID()const{
     return ID;
 }
 
-void Usuario::obtenerDatos(){
+void Usuario::obtenerDatos() {
   std::string nombre;
   std::string direccion;
   long long telefono;
-  std::cout << "Ingrese el nombre: ";
+  std::cout << "Ingrese el nombre: " << std::endl;
+  std::getchar();
   getline(std::cin, nombre);
+  std::cout <<"get line worked"<<std::endl;
   setNombre(nombre);
+  std::cout <<"set nombre worked"<<std::endl;
   std::cout << "Ingrese la direccion: ";
   getline(std::cin, direccion);
   setDireccion(direccion);
@@ -67,3 +70,4 @@ void Usuario::obtenerDatos(){
   std::cin >> telefono;
   setTelefono(telefono);
 }
+

@@ -12,6 +12,7 @@ std::string tipoEmpaque;
 
 public:
 Paquete(float,float);
+Paquete(float);
 virtual ~Paquete();
 
 void setPeso(float);

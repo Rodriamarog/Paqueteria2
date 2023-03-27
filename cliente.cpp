@@ -2,7 +2,7 @@
 #include <iostream>
 #include "cliente.h" 
 
-int Cliente::contCliente = 1;
+int Cliente::contCliente = 0;
 
 Cliente::Cliente() {
   tarjeta = "";
@@ -24,6 +24,7 @@ void Cliente::crearCliente(){
   obtenerDatos();
   std::string tarjeta;
   std::cout << "Ingrese el num de tarjeta: ";
+  std::getchar();
   getline(std::cin, tarjeta);
   setTarjeta(tarjeta);
 }

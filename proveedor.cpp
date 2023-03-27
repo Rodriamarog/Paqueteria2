@@ -67,15 +67,15 @@ float Proveedor::entregarPaquete(int opcion){
   std::cout << "Ingrese el peso en kilogramos: ";
   std::cin >> peso;
   if(opcion == 1){
-    Paquete pq1(peso, 100);
+    Paquete pq1(peso);
     return pq1.calcCosto();
   }
   else if(opcion == 2){
-    Paquetaxo pq1(peso, 274);
-    return pq1.calcCostoExpress();
+    Paquetaxo pq1(peso, 200);
+    return pq1.calcCosto();
   }
   else{
-    PaqueShrek pq1(peso,670);
-    return pq1.calcCostco2Day();
+    PaqueShrek pq1(peso, 300);
+    return pq1.calcCosto();
   }
 }

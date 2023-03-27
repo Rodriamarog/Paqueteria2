@@ -1,12 +1,22 @@
 #include "paquete.h"
 #include <iostream>
 
-Paquete::Paquete(float peso,float costo=100){
+int Paquete::contP = 0;
+
+Paquete::Paquete(float peso,float costo){
   this-> peso = peso;
   this-> costo = costo;
   Paquete::SetNumPaquete(++contP);
   this-> tipoEmpaque = " ";
 }
+
+Paquete::Paquete(float peso){
+  this-> peso = peso;
+  this-> costo = 100;
+  Paquete::SetNumPaquete(++contP);
+  this-> tipoEmpaque = " ";
+}
+
 Paquete::~Paquete(){std::cout<<"Destructor de paquete"<<std::endl;}
 
 void Paquete::setPeso(float peso){this->peso=peso;}
