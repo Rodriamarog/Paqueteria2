@@ -6,23 +6,26 @@
 std::vector<Cliente> clientes; 
 std::vector<Proveedor> proveedores; 
 
-void Menu(){
+void Menu() {
   int opc = 0;
-  std::cout << "Cliente (1) o Proveedor(2), o salir(3)" << std::endl;
-do{
-  std::cin >> opc;
-}while(opc < 1 || opc > 3);
-  switch(opc){
-    case 1:
-      menuCliente();
-      break;
-    case 2:
-      menuProveedor();
-      break;
-    case 3:
-      std::cout << "Bye :)" << std::endl;
-  }
+
+  do {
+    std::cout << "Cliente (1) o Proveedor(2), o salir(3)" << std::endl;
+    std::cin >> opc;
+    
+    switch (opc) {
+      case 1:
+        menuCliente();
+        break;
+      case 2:
+        menuProveedor();
+        break;
+      case 3:
+        std::cout << "Bye :)" << std::endl;
+    }
+  } while (opc != 3);
 }
+
 
 void menuCliente(){
   int opc;
