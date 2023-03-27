@@ -60,9 +60,7 @@ void Usuario::obtenerDatos() {
   std::cout << "Ingrese el nombre: " << std::endl;
   std::getchar();
   getline(std::cin, nombre);
-  std::cout <<"get line worked"<<std::endl;
   setNombre(nombre);
-  std::cout <<"set nombre worked"<<std::endl;
   std::cout << "Ingrese la direccion: ";
   getline(std::cin, direccion);
   setDireccion(direccion);

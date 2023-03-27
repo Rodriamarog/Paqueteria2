@@ -41,6 +41,6 @@ void Cliente::datosCliente(){
 
 //funciones tipo de envio y entrega de paquete
 void Cliente::hacerCompra(){
-  std::cout << "Hiciste una compra!";
+  std::cout << "Hiciste una compra!"<<std::endl;
   setEstatusCompra(true);
 }
