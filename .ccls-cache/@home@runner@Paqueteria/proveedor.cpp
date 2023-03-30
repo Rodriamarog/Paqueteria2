@@ -5,7 +5,7 @@
 #include "paquetaxo.h"
 #include "paqueshrek.h"
 
-int Proveedor::contProveedor = 1;
+int Proveedor::contProveedor = 0;
 
 Proveedor::Proveedor() {
   tipoServicio = "";
@@ -30,6 +30,7 @@ void Proveedor::crearProovedor(){
   std::string compania;
   
   std::cout << "Ingrese el tipo de servicio: ";
+  getchar();
   getline(std::cin, tipoServicio);
   setServicio(tipoServicio);
   
@@ -68,14 +69,17 @@ float Proveedor::entregarPaquete(int opcion){
   std::cin >> peso;
   if(opcion == 1){
     Paquete pq1(peso);
+    std::cout<<"El costo por paquete es de: $" << pq1.calcCosto();
     return pq1.calcCosto();
   }
   else if(opcion == 2){
     Paquetaxo pq1(peso, 200);
+    std::cout<<"El costo por Paquetaxo es de: $" << pq1.calcCosto();
     return pq1.calcCosto();
   }
   else{
     PaqueShrek pq1(peso, 300);
+    std::cout<<"El costo por PaqueShrek es de: $" << pq1.calcCosto();
     return pq1.calcCosto();
   }
 }

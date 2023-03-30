@@ -1,9 +1,3 @@
-//
-//  main.cpp
-//  hmultiples
-//
-//  Created by Catalina Zavala on 3/15/23.
-//
 #include "usuario.h"
 #include "paquete.h"
 #include "paquetaxo.h"
